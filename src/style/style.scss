@@ -2,7 +2,7 @@ $primary-color: #234f91;
 $secondary-color: #4b71b7;
 $background-color: #fbf7f7;
 $paragraph-color: #1a1a1a;
-$height-nav: 7.2rem;
+$height-header: 8rem;
 
 :root {
     font-size: 62.5%;
@@ -21,22 +21,28 @@ body {
     background-color: $background-color;
     overflow-x: hidden;
 
-    nav {
+    header {
         display: flex;
-        height: $height-nav;
+        height: $height-header;
         position: fixed;
         top: 0;
         width: 100vw;
         z-index: 100;
         background-color: $primary-color;
+        margin-bottom: 5rem;
     }
 
     nav span.logo {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 21rem;
-        height: 21rem;
+    }
+    
+    nav span.logo img {
+        margin-block: 0.8rem;
+        margin-inline: 2.4rem;
+        width: 35%;
+        height: 35%;
     }
 
     nav div.menu {
@@ -45,23 +51,9 @@ body {
         align-items: center;
     }
 
-    .menu ul:nth-child(1) {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        margin-top: 6rem;
-        font-weight: 700;
-        font-size: 2.4rem;
-        line-height: 3.1rem;
+    main {
+        margin-top: 10rem;
     }
-
-    .menu ul li a {
-        color: #e6e6e6;
-        text-decoration: none;
-        transition: background 300ms;
-    }
-    
 }
 
 

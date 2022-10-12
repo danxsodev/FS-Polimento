@@ -15,39 +15,32 @@ body {
   background-color: #fbf7f7;
   overflow-x: hidden;
 }
-body nav {
+body header {
   display: flex;
-  height: 7.2rem;
+  height: 8rem;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 100;
   background-color: #234f91;
+  margin-bottom: 5rem;
 }
 body nav span.logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 21rem;
-  height: 21rem;
+}
+body nav span.logo img {
+  margin-block: 0.8rem;
+  margin-inline: 2.4rem;
+  width: 35%;
+  height: 35%;
 }
 body nav div.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body .menu ul:nth-child(1) {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 6rem;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 3.1rem;
-}
-body .menu ul li a {
-  color: #e6e6e6;
-  text-decoration: none;
-  transition: background 300ms;
+body main {
+  margin-top: 10rem;
 }/*# sourceMappingURL=style.css.map */
