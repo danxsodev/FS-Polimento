@@ -2,6 +2,8 @@ $primary-color: #234f91;
 $secondary-color: #4b71b7;
 $background-color: #fbf7f7;
 $paragraph-color: #1a1a1a;
+$whatsapp-color: #128c7e;
+$whatsapp-color-hover: #0c5a51;
 $height-header: 8rem;
 
 :root {
@@ -14,11 +16,20 @@ $height-header: 8rem;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
 body {
     width: 100%;
     height: 100vh;
     font-size: 1.6rem;
     background-color: $background-color;
+    color: $paragraph-color;
     overflow-x: hidden;
 
     header {
@@ -30,38 +41,232 @@ body {
         z-index: 100;
         background-color: $primary-color;
         margin-bottom: 5rem;
-    }
 
-    nav span.logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        nav span.logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav span.logo img {
+            margin-block: 0.8rem;
+            margin-inline: 2.4rem;
+            width: 35%;
+            height: 35%;
+        }
     
-    nav span.logo img {
-        margin-block: 0.8rem;
-        margin-inline: 2.4rem;
-        width: 35%;
-        height: 35%;
+        nav div.menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
-    nav div.menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     main {
         margin-top: 10rem;
+
+        section#home {
+            margin-block: 2rem;
+            margin-inline: 2rem;
+        }
+
+        section#home span {
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            font-size: 1.8rem;
+        }
+
+        section#home div.content {
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            font-size: 1.6rem;
+        }
+
+        section#home div.content div.slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        section#home div.content div.slider figure span img {
+            width: 80%;
+        }
+
+        section#about {
+            margin-block: 2rem;
+            margin-inline: 2rem;
+          
+        }
+
+        section#about span{
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        section#about div.content {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+        }
+
+        section#about div.content div.stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding-block: 4rem;
+            margin-inline: auto;
+            background-color: var(--stats-color); 
+            border-radius: 0.6rem;
+            gap: 6rem;
+        }
+
+        section#about div.content div.stats span.stat {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section#about div.content div.stats span.stat h4 {
+            font-size: 1.8rem;
+        }
+
+        section#about div.content div.stats span.stat p {
+            font-size: 1.6rem;
+        }
+
+        section#service {
+            margin-block: 2rem;
+            margin-inline: 2rem;
+        }
+
+        section#service span {
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        section#service div.content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section#service div.content div.cards {
+            margin-inline: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        section#service div.content div.cards span.card {
+            padding: 2.4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+            border: 0.2rem solid #1a1a1a;
+            border-radius: 1rem;
+            text-align: left;
+            background-color: $primary-color;
+            color: #e6e6e6;
+            gap: 1rem;
+        }
+
+        section#service div.content div.cards span.card h4 {
+            font-size: 1.8rem;
+        }
+
+        section#service div.content div.cards span.card p {
+            font-size: 1.6rem;
+        }
+
+        section#contact {
+            margin-block: 2rem;
+            margin-inline: 2rem;
+        }
+    
+        section#contact span {
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    
+        section#contact div.content ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+    
+        section#contact div.content ul li a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: $paragraph-color;
+        }
+    
+        section#contact div.content ul li path {
+            stroke: $secondary-color;
+        }
+
+        section#contact a.whatsapp {
+            width: 26.3rem;
+            height: 6.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: none;
+            border-radius: 4rem;
+            margin-block: 6rem;
+            margin-inline: auto;    
+            background-color: $whatsapp-color;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            gap: 1.6rem;
+            cursor: pointer;
+            transition: background 300ms;
+        }
+
+        section#contact a.whatsapp:hover {
+            background-color: $whatsapp-color-hover;
+        }
+    }
+
+    footer {
+        text-align: center;
+        background-color: $secondary-color;
+        color: #e6e6e6;
+        padding-block: 6rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
