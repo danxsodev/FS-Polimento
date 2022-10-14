@@ -1,10 +1,10 @@
-$primary-color: #234f91;
+$primary-color: #0e0872;
 $secondary-color: #4b71b7;
 $background-color: #fbf7f7;
 $paragraph-color: #1a1a1a;
 $whatsapp-color: #128c7e;
 $whatsapp-color-hover: #0c5a51;
-$height-header: 8rem;
+$height-header: 9rem;
 
 :root {
     font-size: 62.5%;
@@ -60,11 +60,11 @@ body {
             justify-content: space-between;
             align-items: center;
         }
+
     }
 
-
     main {
-        margin-top: 10rem;
+        margin-block: 12rem;
 
         section#home {
             margin-block: 2rem;
@@ -165,7 +165,7 @@ body {
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.8rem;            
         }
 
         section#service div.content {
@@ -218,12 +218,14 @@ body {
             align-items: center;
             text-align: center;
             font-size: 1.8rem;
+            gap: 2rem;
         }
     
         section#contact div.content ul {
+            margin-block: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 1.6rem;
+            gap: 1.2rem;
         }
     
         section#contact div.content ul li a {
@@ -269,4 +271,37 @@ body {
         color: #e6e6e6;
         padding-block: 6rem;
     }
+
+    footer ul.social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+        gap: 3.2rem;
+    }
+
+    footer ul.social-links li a {
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0e0872;
+        transition: background 300ms;
+    }
+
+    footer ul.social-links li a.social-facebook:hover {
+        background-color: #1b74e4;
+        transform:scale(1.2);
+        transition: transform ease-in-out 300ms;
+    }
+
+    footer ul.social-links li a.social-instagram:hover {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        transform:scale(1.2);
+        transition: transform ease-in-out 300ms;
+    }
+
 }

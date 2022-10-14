@@ -26,12 +26,12 @@ body {
 }
 body header {
   display: flex;
-  height: 8rem;
+  height: 9rem;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 100;
-  background-color: #234f91;
+  background-color: #0e0872;
   margin-bottom: 5rem;
 }
 body header nav span.logo {
@@ -51,7 +51,7 @@ body header nav div.menu {
   align-items: center;
 }
 body main {
-  margin-top: 10rem;
+  margin-block: 12rem;
 }
 body main section#home {
   margin-block: 2rem;
@@ -162,7 +162,7 @@ body main section#service div.content div.cards span.card {
   border: 0.2rem solid #1a1a1a;
   border-radius: 1rem;
   text-align: left;
-  background-color: #234f91;
+  background-color: #0e0872;
   color: #e6e6e6;
   gap: 1rem;
 }
@@ -184,11 +184,13 @@ body main section#contact span {
   align-items: center;
   text-align: center;
   font-size: 1.8rem;
+  gap: 2rem;
 }
 body main section#contact div.content ul {
+  margin-block: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.2rem;
 }
 body main section#contact div.content ul li a {
   display: flex;
@@ -227,4 +229,32 @@ body footer {
   background-color: #4b71b7;
   color: #e6e6e6;
   padding-block: 6rem;
+}
+body footer ul.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  gap: 3.2rem;
+}
+body footer ul.social-links li a {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0872;
+  transition: background 300ms;
+}
+body footer ul.social-links li a.social-facebook:hover {
+  background-color: #1b74e4;
+  transform: scale(1.2);
+  transition: transform ease-in-out 300ms;
+}
+body footer ul.social-links li a.social-instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  transform: scale(1.2);
+  transition: transform ease-in-out 300ms;
 }/*# sourceMappingURL=style.css.map */
