@@ -108,7 +108,6 @@ body {
         section#about {
             margin-block: 2rem;
             margin-inline: 2rem;
-          
         }
 
         section#about span{
@@ -128,21 +127,24 @@ body {
         }
 
         section#about div.content div.stats {
+            margin-block: 2rem;
+            margin-inline: auto;
+            padding-block: 4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 100%;
-            padding-block: 4rem;
-            margin-inline: auto;
-            background-color: var(--stats-color); 
-            border-radius: 0.6rem;
-            gap: 6rem;
+            background-color: $secondary-color; 
+            border-radius: 0.8rem;
+            gap: 4rem;
         }
 
         section#about div.content div.stats span.stat {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         section#about div.content div.stats span.stat h4 {
@@ -189,7 +191,6 @@ body {
             flex-direction: column;
             justify-content: center;
             box-sizing: border-box;
-            border: 0.2rem solid #1a1a1a;
             border-radius: 1rem;
             text-align: left;
             background-color: $primary-color;
@@ -205,8 +206,74 @@ body {
             font-size: 1.6rem;
         }
 
-        section#contact {
+        section#service div.content button {
+            width: 15rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: none;
+            border-radius: 0.5rem;
+            margin-block: 6rem;
+            margin-inline: auto;    
+            background-color: $secondary-color;
+            color: #e6e6e6;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            gap: 2rem;
+            cursor: pointer;
+        }
+
+        section#service div.content dialog {
+            width: 80%;
+            height: 80%;
+            max-width: 100%;
+            max-height: 50%;
             margin-block: 2rem;
+            margin-inline: auto;
+            padding: 2.4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: $secondary-color;
+            color: #e6e6e6;
+        }
+
+        section#service div.content dialog span {
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            font-size: 1.8rem;
+        }
+
+        section#service div.content dialog figure {
+            margin-inline: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+        }
+
+        section#service div.content dialog figure img {
+            margin-block: 2rem;
+            margin-inline: auto;
+            width: 100%;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        section#contact {
+            margin-block: 4rem;
             margin-inline: 2rem;
         }
     
@@ -222,7 +289,7 @@ body {
         }
     
         section#contact div.content ul {
-            margin-block: 2rem;
+            margin-block: 4rem;
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
@@ -255,7 +322,7 @@ body {
             font-size: 1.4rem;
             font-weight: 700;
             text-transform: uppercase;
-            gap: 1.6rem;
+            gap: 2rem;
             cursor: pointer;
             transition: background 300ms;
         }
