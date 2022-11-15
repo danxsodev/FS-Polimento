@@ -24,7 +24,7 @@ body {
   color: #1a1a1a;
   overflow-x: hidden;
 }
-body header {
+body header#home {
   display: flex;
   height: 9rem;
   position: fixed;
@@ -33,31 +33,46 @@ body header {
   z-index: 100;
   background-color: #0e0872;
   margin-bottom: 5rem;
+  color: #e6e6e6;
 }
-body header nav span.logo {
+body header#home nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 9rem;
 }
-body header nav span.logo img {
+body header#home nav span.logo img {
   margin-block: 0.8rem;
   margin-inline: 2.4rem;
-  width: 35%;
-  height: 35%;
+  width: 8rem;
+  height: 6rem;
 }
-body header nav div.menu {
+body header#home nav div.menu ul li a {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+body header#home .menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+body header#home .menu ul li a {
+  color: #e6e6e6;
+  text-decoration: none;
 }
 body main {
   margin-block: 12rem;
 }
-body main section#home {
+body main section.home {
   margin-block: 2rem;
   margin-inline: 2rem;
 }
-body main section#home span {
+body main section.home span {
   margin-block: 2rem;
   display: flex;
   flex-direction: column;
@@ -67,7 +82,7 @@ body main section#home span {
   gap: 2rem;
   font-size: 1.8rem;
 }
-body main section#home div.content {
+body main section.home div.content {
   margin-block: 2rem;
   display: flex;
   flex-direction: column;
@@ -77,14 +92,14 @@ body main section#home div.content {
   gap: 2rem;
   font-size: 1.6rem;
 }
-body main section#home div.content div.slider {
+body main section.home div.content div.slider {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
 }
-body main section#home div.content div.slider figure span img {
+body main section.home div.content div.slider figure span img {
   width: 80%;
 }
 body main section#about {
@@ -100,10 +115,11 @@ body main section#about span {
   text-align: center;
   font-size: 1.8rem;
 }
-body main section#about div.content {
+body main section#about div.content p {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
+  padding-block: 2rem;
 }
 body main section#about div.content div.stats {
   margin-block: 2rem;
@@ -113,9 +129,10 @@ body main section#about div.content div.stats {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  background-color: #4b71b7;
+  background-color: #0e0872;
   border-radius: 0.8rem;
   gap: 4rem;
+  color: #e6e6e6;
 }
 body main section#about div.content div.stats span.stat {
   display: flex;
@@ -183,9 +200,9 @@ body main section#service div.content button {
   text-align: center;
   border: none;
   border-radius: 0.5rem;
-  margin-block: 6rem;
+  margin-block: 4rem;
   margin-inline: auto;
-  background-color: #4b71b7;
+  background-color: #0e0872;
   color: #e6e6e6;
   font-size: 1.4rem;
   font-weight: 700;
@@ -207,8 +224,8 @@ body main section#service div.content dialog {
   position: relative;
   border: none;
   border-radius: 0.5rem;
-  background-color: #4b71b7;
-  color: #e6e6e6;
+  background-color: #8ba8f7;
+  color: #1a1a1a;
 }
 body main section#service div.content dialog span {
   margin-block: 2rem;
@@ -258,11 +275,12 @@ body main section#contact div.content ul {
 body main section#contact div.content ul li a {
   display: flex;
   align-items: center;
+  text-align: justify;
   gap: 1rem;
   color: #1a1a1a;
 }
 body main section#contact div.content ul li path {
-  stroke: #4b71b7;
+  stroke: #8ba8f7;
 }
 body main section#contact a.whatsapp {
   width: 26.3rem;
@@ -289,8 +307,8 @@ body main section#contact a.whatsapp:hover {
 }
 body footer {
   text-align: center;
-  background-color: #4b71b7;
-  color: #e6e6e6;
+  background-color: #8ba8f7;
+  color: #1a1a1a;
   padding-block: 6rem;
 }
 body footer ul.social-links {

@@ -1,5 +1,5 @@
 $primary-color: #0e0872;
-$secondary-color: #4b71b7;
+$secondary-color: #8ba8f7;
 $background-color: #fbf7f7;
 $paragraph-color: #1a1a1a;
 $whatsapp-color: #128c7e;
@@ -32,7 +32,7 @@ body {
     color: $paragraph-color;
     overflow-x: hidden;
 
-    header {
+    header#home {
         display: flex;
         height: $height-header;
         position: fixed;
@@ -41,37 +41,53 @@ body {
         z-index: 100;
         background-color: $primary-color;
         margin-bottom: 5rem;
+        color: #e6e6e6;
 
-        nav span.logo {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: $height-header;
         }
         
         nav span.logo img {
             margin-block: 0.8rem;
             margin-inline: 2.4rem;
-            width: 35%;
-            height: 35%;
+            width: 8rem;
+            height: 6rem;
         }
     
-        nav div.menu {
+        nav div.menu ul li a {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
 
+        .menu ul:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+        }
+        
+        .menu ul li a {
+            color: #e6e6e6;
+            text-decoration: none;
+        }
     }
 
     main {
         margin-block: 12rem;
 
-        section#home {
+        section.home {
             margin-block: 2rem;
             margin-inline: 2rem;
         }
 
-        section#home span {
+        section.home span {
             margin-block: 2rem;
             display: flex;
             flex-direction: column;
@@ -82,7 +98,7 @@ body {
             font-size: 1.8rem;
         }
 
-        section#home div.content {
+        section.home div.content {
             margin-block: 2rem;
             display: flex;
             flex-direction: column;
@@ -93,7 +109,7 @@ body {
             font-size: 1.6rem;
         }
 
-        section#home div.content div.slider {
+        section.home div.content div.slider {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -101,7 +117,7 @@ body {
             gap: 1.6rem;
         }
 
-        section#home div.content div.slider figure span img {
+        section.home div.content div.slider figure span img {
             width: 80%;
         }
 
@@ -120,10 +136,11 @@ body {
             font-size: 1.8rem;
         }
 
-        section#about div.content {
+        section#about div.content p {
             display: flex;
             flex-direction: column;
             font-size: 1.6rem;
+            padding-block: 2rem;
         }
 
         section#about div.content div.stats {
@@ -134,9 +151,10 @@ body {
             flex-direction: column;
             justify-content: center;
             width: 100%;
-            background-color: $secondary-color; 
+            background-color: $primary-color; 
             border-radius: 0.8rem;
             gap: 4rem;
+            color: #e6e6e6;
         }
 
         section#about div.content div.stats span.stat {
@@ -215,9 +233,9 @@ body {
             text-align: center;
             border: none;
             border-radius: 0.5rem;
-            margin-block: 6rem;
+            margin-block: 4rem;
             margin-inline: auto;    
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: #e6e6e6;
             font-size: 1.4rem;
             font-weight: 700;
@@ -241,7 +259,7 @@ body {
             border: none;
             border-radius: 0.5rem;
             background-color: $secondary-color;
-            color: #e6e6e6;
+            color: $paragraph-color;
         }
 
         section#service div.content dialog span {
@@ -275,6 +293,7 @@ body {
         section#contact {
             margin-block: 4rem;
             margin-inline: 2rem;
+
         }
     
         section#contact span {
@@ -293,11 +312,13 @@ body {
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
+            
         }
     
         section#contact div.content ul li a {
             display: flex;
             align-items: center;
+            text-align: justify;
             gap: 1rem;
             color: $paragraph-color;
         }
@@ -335,7 +356,7 @@ body {
     footer {
         text-align: center;
         background-color: $secondary-color;
-        color: #e6e6e6;
+        color: $paragraph-color;
         padding-block: 6rem;
     }
 
