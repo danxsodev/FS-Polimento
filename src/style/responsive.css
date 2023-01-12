@@ -1,0 +1,48 @@
+@media (min-width: 481px) {
+
+    body main section#service  {
+        margin-block: 16rem;
+
+    }
+
+
+    body main section#service div.content div.container-card {
+        margin-inline: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    body main section#service div.content div.container-card span.card {
+        max-width: 35rem;
+        max-height: 35rem;
+    }
+
+    body main section#service div.content dialog figure img {
+        margin-block: 2rem;
+        margin-inline: auto;
+        max-width: 30rem;
+        border: none;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 769px) { 
+      
+    body main section#service div.content div.container-card {
+        margin-inline: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    body main section#service div.content div.container-card span.card {
+        max-width: 30rem;
+        max-height: 30rem;
+        flex-grow: 1;
+    }
+
+}

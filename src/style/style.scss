@@ -1,7 +1,7 @@
-$primary-color: #0e0872;
-$secondary-color: #8ba8f7;
-$background-color: #fbf7f7;
-$paragraph-color: #1a1a1a;
+$primary-color: #0A0844;
+$secondary-color: #429BD7;
+$background-color: #dddfff;
+$paragraph-color: #161616;
 $whatsapp-color: #128c7e;
 $whatsapp-color-hover: #0c5a51;
 $height-header: 9rem;
@@ -32,12 +32,12 @@ body {
     color: $paragraph-color;
     overflow-x: hidden;
 
-    header#home {
+    header {
         display: flex;
         height: $height-header;
         position: fixed;
         top: 0;
-        width: 100vw;
+        width: 100%;
         z-index: 100;
         background-color: $primary-color;
         margin-bottom: 5rem;
@@ -77,14 +77,25 @@ body {
             color: #e6e6e6;
             text-decoration: none;
         }
+
+        button#btn-burguer {
+            width: 4rem;
+            height: 4rem;
+            border: none;
+            background: none;
+            align-items: center;
+        }
     }
 
     main {
-        margin-block: 12rem;
+        width: 100%;
+        margin-top: $height-header;
 
         section.home {
-            margin-block: 2rem;
-            margin-inline: 2rem;
+            width: 100%;
+            height: 100vh;
+            border: 0.5rem solid #161616;
+            
         }
 
         section.home span {
@@ -122,8 +133,10 @@ body {
         }
 
         section#about {
-            margin-block: 2rem;
-            margin-inline: 2rem;
+            margin-inline: auto;
+            width: 100%;
+            height: 100vh;
+            border: 0.5rem solid #161616;
         }
 
         section#about span{
@@ -140,42 +153,15 @@ body {
             display: flex;
             flex-direction: column;
             font-size: 1.6rem;
-            padding-block: 2rem;
-        }
-
-        section#about div.content div.stats {
-            margin-block: 2rem;
-            margin-inline: auto;
-            padding-block: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            background-color: $primary-color; 
-            border-radius: 0.8rem;
-            gap: 4rem;
-            color: #e6e6e6;
-        }
-
-        section#about div.content div.stats span.stat {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        section#about div.content div.stats span.stat h4 {
-            font-size: 1.8rem;
-        }
-
-        section#about div.content div.stats span.stat p {
-            font-size: 1.6rem;
+            padding-block: 1.2rem;
+            padding-inline: 2rem;
         }
 
         section#service {
-            margin-block: 2rem;
-            margin-inline: 2rem;
+            width: 100%;
+            height: 100vh;
+            border: 0.5rem solid #161616;
+            padding-bottom: 140rem;
         }
 
         section#service span {
@@ -195,7 +181,7 @@ body {
             align-items: center;
         }
 
-        section#service div.content div.cards {
+        section#service div.content div.container-card {
             margin-inline: 2rem;
             display: flex;
             flex-direction: column;
@@ -203,7 +189,7 @@ body {
             gap: 2rem;
         }
 
-        section#service div.content div.cards span.card {
+        section#service div.content div.container-card span.card {
             padding: 2.4rem;
             display: flex;
             flex-direction: column;
@@ -216,25 +202,25 @@ body {
             gap: 1rem;
         }
 
-        section#service div.content div.cards span.card h4 {
+        section#service div.content div.container-card span.card h3 {
             font-size: 1.8rem;
         }
 
-        section#service div.content div.cards span.card p {
+        section#service div.content div.container-card span.card p {
             font-size: 1.6rem;
         }
 
-        section#service div.content button {
+        section#service div.content button#btn-open-modal {
             width: 15rem;
             height: 5rem;
+            margin-block: 4rem;
+            margin-inline: auto;    
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             border: none;
             border-radius: 0.5rem;
-            margin-block: 4rem;
-            margin-inline: auto;    
             background-color: $primary-color;
             color: #e6e6e6;
             font-size: 1.4rem;
@@ -246,20 +232,19 @@ body {
 
         section#service div.content dialog {
             width: 80%;
-            height: 80%;
-            max-width: 100%;
-            max-height: 50%;
             margin-block: 2rem;
             margin-inline: auto;
             padding: 2.4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            position: relative;
+            align-items: center;
+            position: fixed;
             border: none;
             border-radius: 0.5rem;
             background-color: $secondary-color;
             color: $paragraph-color;
+            overflow-y: auto;
         }
 
         section#service div.content dialog span {
@@ -273,7 +258,7 @@ body {
             font-size: 1.8rem;
         }
 
-        section#service div.content dialog figure {
+        section#service div.content dialog div.container-modal figure {
             margin-inline: auto;
             display: flex;
             flex-direction: column;
@@ -282,7 +267,7 @@ body {
             gap: 4rem;
         }
 
-        section#service div.content dialog figure img {
+        section#service div.content dialog div.container-modal figure img {
             margin-block: 2rem;
             margin-inline: auto;
             width: 100%;
@@ -291,9 +276,9 @@ body {
         }
 
         section#contact {
-            margin-block: 4rem;
-            margin-inline: 2rem;
-
+            width: 100%;
+            height: 100vh;
+            border: 0.5rem solid #161616;
         }
     
         section#contact span {
@@ -324,39 +309,16 @@ body {
         }
     
         section#contact div.content ul li path {
-            stroke: $secondary-color;
+            stroke: $primary-color;
         }
 
-        section#contact a.whatsapp {
-            width: 26.3rem;
-            height: 6.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border: none;
-            border-radius: 4rem;
-            margin-block: 6rem;
-            margin-inline: auto;    
-            background-color: $whatsapp-color;
-            color: white;
-            font-size: 1.4rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            gap: 2rem;
-            cursor: pointer;
-            transition: background 300ms;
-        }
-
-        section#contact a.whatsapp:hover {
-            background-color: $whatsapp-color-hover;
-        }
+        
     }
 
     footer {
         text-align: center;
-        background-color: $secondary-color;
-        color: $paragraph-color;
+        background-color: $primary-color;
+        color: #e6e6e6;
         padding-block: 6rem;
     }
 
@@ -376,8 +338,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #0e0872;
+        background-color: $secondary-color;
         transition: background 300ms;
+        border-radius: 0.6rem;
     }
 
     footer ul.social-links li a.social-facebook:hover {
@@ -390,6 +353,93 @@ body {
         background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
         transform:scale(1.2);
         transition: transform ease-in-out 300ms;
+    }
+
+    a.btn-floating {
+        width: 4.8rem;
+        height: 4.8rem;
+        right: 1.6rem;
+        bottom: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: fixed;
+        border: none;
+        border-radius: 50%;
+        margin-inline: auto;    
+        background-color: $whatsapp-color;
+        cursor: pointer;
+        transition: background 200ms;
+        z-index: 999;
+    }
+
+    a.btn-floating:hover {
+        background-color: $whatsapp-color-hover;
+    }
+
+    #fade {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 5;
+    }
+      
+    #modal {
+        width: 50rem;
+        max-width: 90%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $background-color;
+        padding: 1.2rem;
+        border-radius: 0.5rem;
+        z-index: 10;
+    }
+      
+    #fade,
+    #modal {
+        transition: 0.5s;
+        opacity: 1;
+        pointer-events: all;
+    }
+      
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.2rem solid #ccc;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #btn-close-modal {
+        background: none;
+        border: none;
+    }
+      
+    .modal-body img {
+        width: 40rem;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+      
+    #modal.hide,
+    #fade.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+      
+    #modal.hide {
+        top: 0;
     }
 
 }

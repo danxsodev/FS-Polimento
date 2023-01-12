@@ -20,40 +20,40 @@ body {
   width: 100%;
   height: 100vh;
   font-size: 1.6rem;
-  background-color: #fbf7f7;
-  color: #1a1a1a;
+  background-color: #dddfff;
+  color: #161616;
   overflow-x: hidden;
 }
-body header#home {
+body header {
   display: flex;
   height: 9rem;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
-  background-color: #0e0872;
+  background-color: #0A0844;
   margin-bottom: 5rem;
   color: #e6e6e6;
 }
-body header#home nav {
+body header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 9rem;
 }
-body header#home nav span.logo img {
+body header nav span.logo img {
   margin-block: 0.8rem;
   margin-inline: 2.4rem;
   width: 8rem;
   height: 6rem;
 }
-body header#home nav div.menu ul li a {
+body header nav div.menu ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-body header#home .menu ul:nth-child(1) {
+body header .menu ul:nth-child(1) {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -61,16 +61,25 @@ body header#home .menu ul:nth-child(1) {
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
-body header#home .menu ul li a {
+body header .menu ul li a {
   color: #e6e6e6;
   text-decoration: none;
 }
+body header button#btn-burguer {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background: none;
+  align-items: center;
+}
 body main {
-  margin-block: 12rem;
+  width: 100%;
+  margin-top: 9rem;
 }
 body main section.home {
-  margin-block: 2rem;
-  margin-inline: 2rem;
+  width: 100%;
+  height: 100vh;
+  border: 0.5rem solid #161616;
 }
 body main section.home span {
   margin-block: 2rem;
@@ -103,8 +112,10 @@ body main section.home div.content div.slider figure span img {
   width: 80%;
 }
 body main section#about {
-  margin-block: 2rem;
-  margin-inline: 2rem;
+  margin-inline: auto;
+  width: 100%;
+  height: 100vh;
+  border: 0.5rem solid #161616;
 }
 body main section#about span {
   margin-block: 2rem;
@@ -119,37 +130,14 @@ body main section#about div.content p {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  padding-block: 2rem;
-}
-body main section#about div.content div.stats {
-  margin-block: 2rem;
-  margin-inline: auto;
-  padding-block: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  background-color: #0e0872;
-  border-radius: 0.8rem;
-  gap: 4rem;
-  color: #e6e6e6;
-}
-body main section#about div.content div.stats span.stat {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-body main section#about div.content div.stats span.stat h4 {
-  font-size: 1.8rem;
-}
-body main section#about div.content div.stats span.stat p {
-  font-size: 1.6rem;
+  padding-block: 1.2rem;
+  padding-inline: 2rem;
 }
 body main section#service {
-  margin-block: 2rem;
-  margin-inline: 2rem;
+  width: 100%;
+  height: 100vh;
+  border: 0.5rem solid #161616;
+  padding-bottom: 140rem;
 }
 body main section#service span {
   margin-block: 2rem;
@@ -166,14 +154,14 @@ body main section#service div.content {
   justify-content: center;
   align-items: center;
 }
-body main section#service div.content div.cards {
+body main section#service div.content div.container-card {
   margin-inline: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
 }
-body main section#service div.content div.cards span.card {
+body main section#service div.content div.container-card span.card {
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
@@ -181,28 +169,28 @@ body main section#service div.content div.cards span.card {
   box-sizing: border-box;
   border-radius: 1rem;
   text-align: left;
-  background-color: #0e0872;
+  background-color: #0A0844;
   color: #e6e6e6;
   gap: 1rem;
 }
-body main section#service div.content div.cards span.card h4 {
+body main section#service div.content div.container-card span.card h3 {
   font-size: 1.8rem;
 }
-body main section#service div.content div.cards span.card p {
+body main section#service div.content div.container-card span.card p {
   font-size: 1.6rem;
 }
-body main section#service div.content button {
+body main section#service div.content button#btn-open-modal {
   width: 15rem;
   height: 5rem;
+  margin-block: 4rem;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   border: none;
   border-radius: 0.5rem;
-  margin-block: 4rem;
-  margin-inline: auto;
-  background-color: #0e0872;
+  background-color: #0A0844;
   color: #e6e6e6;
   font-size: 1.4rem;
   font-weight: 700;
@@ -212,20 +200,19 @@ body main section#service div.content button {
 }
 body main section#service div.content dialog {
   width: 80%;
-  height: 80%;
-  max-width: 100%;
-  max-height: 50%;
   margin-block: 2rem;
   margin-inline: auto;
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  position: fixed;
   border: none;
   border-radius: 0.5rem;
-  background-color: #8ba8f7;
-  color: #1a1a1a;
+  background-color: #429BD7;
+  color: #161616;
+  overflow-y: auto;
 }
 body main section#service div.content dialog span {
   margin-block: 2rem;
@@ -237,7 +224,7 @@ body main section#service div.content dialog span {
   gap: 2rem;
   font-size: 1.8rem;
 }
-body main section#service div.content dialog figure {
+body main section#service div.content dialog div.container-modal figure {
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -245,7 +232,7 @@ body main section#service div.content dialog figure {
   justify-content: center;
   gap: 4rem;
 }
-body main section#service div.content dialog figure img {
+body main section#service div.content dialog div.container-modal figure img {
   margin-block: 2rem;
   margin-inline: auto;
   width: 100%;
@@ -253,8 +240,9 @@ body main section#service div.content dialog figure img {
   border-radius: 1rem;
 }
 body main section#contact {
-  margin-block: 4rem;
-  margin-inline: 2rem;
+  width: 100%;
+  height: 100vh;
+  border: 0.5rem solid #161616;
 }
 body main section#contact span {
   margin-block: 2rem;
@@ -277,38 +265,15 @@ body main section#contact div.content ul li a {
   align-items: center;
   text-align: justify;
   gap: 1rem;
-  color: #1a1a1a;
+  color: #161616;
 }
 body main section#contact div.content ul li path {
-  stroke: #8ba8f7;
-}
-body main section#contact a.whatsapp {
-  width: 26.3rem;
-  height: 6.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: none;
-  border-radius: 4rem;
-  margin-block: 6rem;
-  margin-inline: auto;
-  background-color: #128c7e;
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  gap: 2rem;
-  cursor: pointer;
-  transition: background 300ms;
-}
-body main section#contact a.whatsapp:hover {
-  background-color: #0c5a51;
+  stroke: #0A0844;
 }
 body footer {
   text-align: center;
-  background-color: #8ba8f7;
-  color: #1a1a1a;
+  background-color: #0A0844;
+  color: #e6e6e6;
   padding-block: 6rem;
 }
 body footer ul.social-links {
@@ -326,8 +291,9 @@ body footer ul.social-links li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0e0872;
+  background-color: #429BD7;
   transition: background 300ms;
+  border-radius: 0.6rem;
 }
 body footer ul.social-links li a.social-facebook:hover {
   background-color: #1b74e4;
@@ -338,4 +304,81 @@ body footer ul.social-links li a.social-instagram:hover {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   transform: scale(1.2);
   transition: transform ease-in-out 300ms;
+}
+body a.btn-floating {
+  width: 4.8rem;
+  height: 4.8rem;
+  right: 1.6rem;
+  bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  border: none;
+  border-radius: 50%;
+  margin-inline: auto;
+  background-color: #128c7e;
+  cursor: pointer;
+  transition: background 200ms;
+  z-index: 999;
+}
+body a.btn-floating:hover {
+  background-color: #0c5a51;
+}
+body #fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+body #modal {
+  width: 50rem;
+  max-width: 90%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dddfff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+body #fade,
+body #modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+body .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.2rem solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+body #btn-close-modal {
+  background: none;
+  border: none;
+}
+body .modal-body img {
+  width: 40rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+body #modal.hide,
+body #fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+body #modal.hide {
+  top: 0;
 }/*# sourceMappingURL=style.css.map */
