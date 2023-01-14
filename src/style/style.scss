@@ -57,14 +57,14 @@ body {
             height: 6rem;
         }
     
-        nav div.menu ul li a {
+        nav div.menu ul.menu-options li a {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
 
-        .menu ul:nth-child(1) {
+        div.menu ul.menu-options:nth-child(1) {
             display: flex;
             flex-direction: row;
             gap: 2rem;
@@ -162,8 +162,8 @@ body {
             height: 100vh;
             border: 0.5rem solid #161616;
             padding-bottom: 140rem;
-        }
-
+        }  
+    
         section#service span {
             margin-block: 2rem;
             display: flex;
@@ -320,39 +320,39 @@ body {
         background-color: $primary-color;
         color: #e6e6e6;
         padding-block: 6rem;
-    }
 
-    footer ul.social-links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        margin-top: 2rem;
-        margin-bottom: 6rem;
-        gap: 3.2rem;
-    }
-
-    footer ul.social-links li a {
-        width: 5rem;
-        height: 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $secondary-color;
-        transition: background 300ms;
-        border-radius: 0.6rem;
-    }
-
-    footer ul.social-links li a.social-facebook:hover {
-        background-color: #1b74e4;
-        transform:scale(1.2);
-        transition: transform ease-in-out 300ms;
-    }
-
-    footer ul.social-links li a.social-instagram:hover {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-        transform:scale(1.2);
-        transition: transform ease-in-out 300ms;
+        ul.social-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin-top: 2rem;
+            margin-bottom: 6rem;
+            gap: 3.2rem;
+        }
+    
+        ul.social-links li a {
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $secondary-color;
+            transition: background 300ms;
+            border-radius: 0.6rem;
+        }
+    
+        ul.social-links li a.social-facebook:hover {
+            background-color: #1b74e4;
+            transform:scale(1.2);
+            transition: transform ease-in-out 300ms;
+        }
+    
+        ul.social-links li a.social-instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            transform:scale(1.2);
+            transition: transform ease-in-out 300ms;
+        }
     }
 
     a.btn-floating {
@@ -376,6 +376,7 @@ body {
 
     a.btn-floating:hover {
         background-color: $whatsapp-color-hover;
+        transform: scale(1.1);
     }
 
     #fade {

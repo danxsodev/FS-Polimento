@@ -47,13 +47,13 @@ body header nav span.logo img {
   width: 8rem;
   height: 6rem;
 }
-body header nav div.menu ul li a {
+body header nav div.menu ul.menu-options li a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-body header .menu ul:nth-child(1) {
+body header div.menu ul.menu-options:nth-child(1) {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -325,6 +325,7 @@ body a.btn-floating {
 }
 body a.btn-floating:hover {
   background-color: #0c5a51;
+  transform: scale(1.1);
 }
 body #fade {
   position: fixed;

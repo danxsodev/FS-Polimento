@@ -1,10 +1,13 @@
-@media (min-width: 481px) {
-
-    body main section#service  {
-        margin-block: 16rem;
-
+@media (min-width: 375px) { 
+    body main section#service {
+        width: 100%;
+        height: 100vh;
+        border: 0.5rem solid #161616;
+        padding-bottom: 125rem;
     }
+}
 
+@media (min-width: 481px) {
 
     body main section#service div.content div.container-card {
         margin-inline: 2rem;
@@ -30,7 +33,20 @@
 }
 
 @media (min-width: 769px) { 
-      
+    body header button#btn-burguer {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) { 
+    body header button#btn-burguer {
+        display: none;
+    }
+
+    body main section#service {
+        padding-bottom: initial;
+    }
+
     body main section#service div.content div.container-card {
         margin-inline: 2rem;
         display: flex;
