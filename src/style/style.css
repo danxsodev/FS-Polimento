@@ -16,11 +16,16 @@ ul li {
   list-style: none;
 }
 
+img {
+  max-width: 90%;
+  border-radius: 0.8rem;
+}
+
 body {
   width: 100%;
   height: 100vh;
   font-size: 1.6rem;
-  background-color: #dddfff;
+  background-color: #EDEDF7;
   color: #161616;
   overflow-x: hidden;
 }
@@ -36,16 +41,19 @@ body header {
   color: #e6e6e6;
 }
 body header nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 9rem;
+  margin-inline: 2rem;
 }
 body header nav span.logo img {
-  margin-block: 0.8rem;
-  margin-inline: 2.4rem;
   width: 8rem;
   height: 6rem;
+}
+body header nav#navigation .menu ul.menu-options {
+  display: none;
 }
 body header nav div.menu ul.menu-options li a {
   display: flex;
@@ -159,7 +167,7 @@ body main section#service div.content div.container-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.4rem;
 }
 body main section#service div.content div.container-card span.card {
   padding: 2.4rem;
@@ -171,7 +179,7 @@ body main section#service div.content div.container-card span.card {
   text-align: left;
   background-color: #0A0844;
   color: #e6e6e6;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 body main section#service div.content div.container-card span.card h3 {
   font-size: 1.8rem;
@@ -210,7 +218,7 @@ body main section#service div.content dialog {
   position: fixed;
   border: none;
   border-radius: 0.5rem;
-  background-color: #429BD7;
+  background-color: #54AEFF;
   color: #161616;
   overflow-y: auto;
 }
@@ -291,7 +299,7 @@ body footer ul.social-links li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #429BD7;
+  background-color: #54AEFF;
   transition: background 300ms;
   border-radius: 0.6rem;
 }
@@ -313,15 +321,12 @@ body a.btn-floating {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   position: fixed;
-  border: none;
   border-radius: 50%;
-  margin-inline: auto;
   background-color: #128c7e;
   cursor: pointer;
   transition: background 200ms;
-  z-index: 999;
+  z-index: 500;
 }
 body a.btn-floating:hover {
   background-color: #0c5a51;
@@ -337,16 +342,20 @@ body #fade {
   z-index: 5;
 }
 body #modal {
+  margin-top: 5rem;
   width: 50rem;
-  max-width: 90%;
+  max-width: 80%;
+  height: 50rem;
+  max-height: 80%;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #dddfff;
+  background-color: #EDEDF7;
   padding: 1.2rem;
   border-radius: 0.5rem;
-  z-index: 10;
+  overflow-y: scroll;
+  z-index: 1000;
 }
 body #fade,
 body #modal {
