@@ -52,6 +52,22 @@ body header nav span.logo img {
   width: 8rem;
   height: 6rem;
 }
+body header nav#navigation .menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 7.2rem;
+  background-color: #0A0844;
+  transition: 400ms ease-in-out;
+  z-index: 1000;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+body header nav#navigation .menu .menu-expanded {
+  height: calc(100vh - 7rem);
+  visibility: visible;
+  overflow-y: auto;
+}
 body header nav#navigation .menu ul.menu-options {
   display: none;
 }
@@ -328,7 +344,7 @@ body a.btn-floating {
   background-color: #128c7e;
   cursor: pointer;
   transition: background 200ms;
-  z-index: 500;
+  z-index: 100;
 }
 body a.btn-floating:hover {
   background-color: #0c5a51;
@@ -357,7 +373,7 @@ body #modal {
   padding: 1.2rem;
   border-radius: 0.5rem;
   overflow-y: scroll;
-  z-index: 1000;
+  z-index: 500;
 }
 body #fade,
 body #modal {
