@@ -11,6 +11,11 @@
 
 @media (min-width: 481px) {
 
+    body main section.home div.content div.slider-container {
+        margin-top: 14.4rem;
+
+    }
+    
     body main section#service div.content div.container-card {
         margin-inline: 2rem;
         display: flex;
@@ -48,9 +53,19 @@
         gap: 4rem;
     }
 
+    body main section.home div.content div.slider-container {
+        margin-top: 18rem;
+
+    }
+
 }
 
 @media (min-width: 1024px) { 
+
+    body main section.home div.content div.slider-container {
+        margin-top: 20rem;
+
+    }
 
     body main section#service {
         padding-bottom: initial;
@@ -70,4 +85,11 @@
         flex-grow: 1;
     }
 
+}
+
+@media (min-width: 1440px) {
+    body main section.home div.content div.slider-container {
+        margin-top: 32rem;
+
+    }
 }
