@@ -46,55 +46,60 @@ body header nav {
   justify-content: space-between;
   align-items: center;
   height: 9rem;
-  margin-inline: 2rem;
 }
 body header nav span.logo img {
   width: 8rem;
   height: 6rem;
-}
-body header nav#navigation .menu {
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 7.2rem;
-  background-color: #0A0844;
-  transition: 400ms ease-in-out;
-  z-index: 1000;
-  visibility: hidden;
-  overflow-y: hidden;
-}
-body header nav#navigation .menu .menu-expanded {
-  height: calc(100vh - 7rem);
-  visibility: visible;
-  overflow-y: auto;
-}
-body header nav#navigation .menu ul.menu-options {
-  display: none;
-}
-body header nav div.menu ul.menu-options li a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-body header div.menu ul.menu-options:nth-child(1) {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
-body header .menu ul li a {
-  color: #e6e6e6;
-  text-decoration: none;
+  margin-inline: 2rem;
 }
 body header button#btn-burguer {
+  margin-inline: 2rem;
   width: 4rem;
   height: 4rem;
   border: none;
   background: none;
   align-items: center;
+  transition: 250ms;
+}
+body header nav.menu-expanded button#btn-burguer svg path:nth-child(1) {
+  stroke-width: 0;
+}
+body header nav.menu-expanded button#btn-burguer svg path:nth-child(3) {
+  transform: translateY(35);
+  transform: rotate(-45deg);
+}
+body header nav.menu-expanded button#btn-burguer svg path:nth-child(2) {
+  transform: translateY(-35);
+  transform: rotate(45deg);
+}
+body header nav .menu ul.menu-options {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  top: 9rem;
+  right: 0rem;
+  background: #0A0844;
+  transition: 300ms;
+  z-index: 1000;
+  height: 0rem;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+body header nav.menu-expanded .menu ul.menu-options {
+  height: calc(100vh - 9rem);
+  visibility: visible;
+  overflow-y: auto;
+  transform: translateY(100);
+}
+body header .menu ul.menu-options li a {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 2.4rem;
 }
 body main {
   width: 100%;

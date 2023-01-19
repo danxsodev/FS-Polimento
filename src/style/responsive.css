@@ -40,14 +40,47 @@
 }
 
 @media (min-width: 769px) { 
+    
+    nav#navigation * {
+        visibility: initial;
+        display: initial;
+        opacity: initial;
+        flex-direction: initial;
+        position: initial;
+        font-size: initial;
+        font-weight: initial;
+        transform: initial;
+    }
 
-    body header button#btn-burguer {
+    body header button#btn-burguer,    
+    body header nav#navigation .menu-expanded,
+    body header nav#navigation div.menu {
         display: none;
     }
-    
-    body header nav#navigation div.menu ul.menu-options {
-        margin-inline: 6.4rem;
+
+    ul.menu-options li a {
+        display: block;
+    }
+
+    nav#navigation div.menu ul.menu-options li a {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.menu ul.menu-options{
+        display: block;
+        flex-direction: row;
+        gap: 2rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+
+    div.menu ul.menu-options li a {
+        margin-inline: 6.4rem;
+        display: block;
         flex-direction: row;
         justify-content: space-between;
         gap: 4rem;

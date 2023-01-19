@@ -54,64 +54,70 @@ body {
             justify-content: space-between;
             align-items: center;
             height: $height-header;
-            margin-inline: 2rem;
         }
         
         nav span.logo img {
             width: 8rem;
             height: 6rem;
+            margin-inline: 2rem;
         }
         
-        nav#navigation .menu {
-            display: block;
-            position: absolute;
-            width: 100%;
-            top: 7.2rem;
-            background-color: $primary-color;
-            transition: 400ms ease-in-out;
-            z-index: 1000;
-            visibility: hidden;
-            overflow-y: hidden;
-        }
-
-        nav#navigation .menu .menu-expanded {
-            height: calc(100vh - 7rem);
-            visibility: visible;
-            overflow-y: auto;
-        }
-
-        nav#navigation .menu ul.menu-options {
-            display: none;
-        }
-    
-        nav div.menu ul.menu-options li a {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        div.menu ul.menu-options:nth-child(1) {
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
-            font-weight: 700;
-            font-size: 1.8rem;
-            line-height: 2.4rem;
-        }
-        
-        .menu ul li a {
-            color: #e6e6e6;
-            text-decoration: none;
-        }
-
         button#btn-burguer {
+            margin-inline: 2rem;
             width: 4rem;
             height: 4rem;
             border: none;
             background: none;
             align-items: center;
+            transition: 250ms;
         }
+
+        nav.menu-expanded button#btn-burguer svg path:nth-child(1) {
+            stroke-width: 0;
+        }
+        
+        nav.menu-expanded button#btn-burguer svg path:nth-child(3) {
+            transform: translateY(35);
+            transform: rotate(-45deg);
+        }
+        
+        nav.menu-expanded button#btn-burguer svg path:nth-child(2) {
+            transform: translateY(-35);
+            transform: rotate(45deg);
+        }
+
+        nav .menu ul.menu-options {
+            display: block;
+            position: absolute;
+            width: 100vw;
+            top: $height-header;
+            right: 0rem;
+            background: $primary-color;
+            transition: 300ms;
+            z-index: 1000;
+            height: 0rem;
+            visibility: hidden;
+            overflow-y: hidden;
+        }
+
+        nav.menu-expanded .menu ul.menu-options{
+            height: calc(100vh - $height-header);
+            visibility: visible;
+            overflow-y: auto;
+            transform: translateY(100);
+        }
+
+        .menu ul.menu-options li a {
+            margin-top: 3.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 2.4rem;
+        }
+
     }
 
     main {
