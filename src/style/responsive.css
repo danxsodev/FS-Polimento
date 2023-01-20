@@ -1,5 +1,9 @@
 @media (min-width: 375px) { 
 
+    body main section#about {
+        padding-inline: 0.8rem;
+    }
+
     body main section#service {
         width: 100%;
         height: 100vh;
@@ -30,13 +34,7 @@
         max-height: 35rem;
     }
 
-    body main section#service div.content dialog figure img {
-        margin-block: 2rem;
-        margin-inline: auto;
-        max-width: 30rem;
-        border: none;
-        border-radius: 1rem;
-    }
+
 }
 
 @media (min-width: 769px) { 
@@ -89,6 +87,12 @@
     body main section.home div.content div.slider-container {
         margin-top: 18rem;
 
+    }
+
+    body main section#contact div.content ul {
+        display: flex;
+        justify-content: center;
+        align-items: left;
     }
 
 }

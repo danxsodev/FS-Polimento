@@ -28,6 +28,7 @@ body {
   background-color: #EDEDF7;
   color: #161616;
   overflow-x: hidden;
+  font-family: Roboto, sans-serif;
 }
 body header {
   display: flex;
@@ -62,14 +63,12 @@ body header button#btn-burguer {
   transition: 250ms;
 }
 body header nav.menu-expanded button#btn-burguer svg path:nth-child(1) {
-  stroke-width: 0;
+  opacity: 0;
 }
 body header nav.menu-expanded button#btn-burguer svg path:nth-child(3) {
-  transform: translateY(35);
   transform: rotate(-45deg);
 }
 body header nav.menu-expanded button#btn-burguer svg path:nth-child(2) {
-  transform: translateY(-35);
   transform: rotate(45deg);
 }
 body header nav .menu ul.menu-options {
@@ -90,9 +89,10 @@ body header nav.menu-expanded .menu ul.menu-options {
   visibility: visible;
   overflow-y: auto;
   transform: translateY(100);
+  pointer-events: painted;
 }
 body header .menu ul.menu-options li a {
-  margin-top: 3.2rem;
+  margin-top: 5.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,11 +104,13 @@ body header .menu ul.menu-options li a {
 body main {
   width: 100%;
   margin-top: 9rem;
+  margin-inline: auto;
 }
 body main section.home {
   width: 100%;
   height: 100vh;
   border: 0.5rem solid #161616;
+  padding-top: 3rem;
 }
 body main section.home span {
   margin-block: 2rem;
@@ -147,6 +149,8 @@ body main section#about {
   width: 100%;
   height: 100vh;
   border: 0.5rem solid #161616;
+  padding-top: 9rem;
+  padding-inline: auto;
 }
 body main section#about span {
   margin-block: 2rem;
@@ -161,13 +165,13 @@ body main section#about div.content p {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  padding-block: 1.2rem;
-  padding-inline: 2rem;
+  padding-block: 1rem;
 }
 body main section#service {
   width: 100%;
   height: 100vh;
   border: 0.5rem solid #161616;
+  padding-top: 9rem;
   padding-bottom: 140rem;
 }
 body main section#service span {
@@ -205,10 +209,10 @@ body main section#service div.content div.container-card span.card {
   gap: 1.6rem;
 }
 body main section#service div.content div.container-card span.card h3 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 body main section#service div.content div.container-card span.card p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 body main section#service div.content button#btn-open-modal {
   width: 15rem;
@@ -229,51 +233,13 @@ body main section#service div.content button#btn-open-modal {
   gap: 2rem;
   cursor: pointer;
 }
-body main section#service div.content dialog {
-  width: 80%;
-  margin-block: 2rem;
-  margin-inline: auto;
-  padding: 2.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #54AEFF;
-  color: #161616;
-  overflow-y: auto;
-}
-body main section#service div.content dialog span {
-  margin-block: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-  font-size: 1.8rem;
-}
-body main section#service div.content dialog div.container-modal figure {
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-}
-body main section#service div.content dialog div.container-modal figure img {
-  margin-block: 2rem;
-  margin-inline: auto;
-  width: 100%;
-  border: none;
-  border-radius: 1rem;
-}
 body main section#contact {
   width: 100%;
   height: 100vh;
+  padding-top: 9rem;
+  padding-inline: 0.8rem;
   border: 0.5rem solid #161616;
+  text-align: center;
 }
 body main section#contact span {
   margin-block: 2rem;
@@ -281,7 +247,6 @@ body main section#contact span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   font-size: 1.8rem;
   gap: 2rem;
 }
@@ -289,7 +254,15 @@ body main section#contact div.content ul {
   margin-block: 4rem;
   display: flex;
   flex-direction: column;
+  justify-content: justify;
   gap: 1.2rem;
+}
+body main section#contact div.content ul li {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  gap: 1rem;
+  color: #161616;
 }
 body main section#contact div.content ul li a {
   display: flex;
@@ -302,6 +275,7 @@ body main section#contact div.content ul li path {
   stroke: #0A0844;
 }
 body footer {
+  padding-inline: 0.8rem;
   text-align: center;
   background-color: #0A0844;
   color: #e6e6e6;
