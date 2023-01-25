@@ -70,21 +70,23 @@ body {
             border: none;
             background: none;
             align-items: center;
-            transition: 250ms;
         }
-
+        
         nav.menu-expanded button#btn-burguer svg path:nth-child(1) {
             opacity: 0;
+            
         }
         
         nav.menu-expanded button#btn-burguer svg path:nth-child(3) {
-            transform: rotate(-45deg);
-           
+            transform: rotate(-30deg);
+            transform-origin: 0 0;   
+            transition: 250ms;         
         }
         
         nav.menu-expanded button#btn-burguer svg path:nth-child(2) {
-            transform: rotate(45deg);
-            
+            transform: rotate(30deg);
+            transform-origin: 0 0;
+            transition: 250ms;
         }
 
         nav .menu ul.menu-options {

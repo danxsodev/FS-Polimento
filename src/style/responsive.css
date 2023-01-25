@@ -49,44 +49,31 @@
         font-weight: initial;
         transform: initial;
     }
-
-    body header button#btn-burguer,    
-    body header nav#navigation .menu-expanded,
-    body header nav#navigation div.menu {
+    
+    body header button#btn-burguer {
         display: none;
     }
 
-    ul.menu-options li a {
-        display: block;
+    body header nav .menu ul.menu-options {
+        display: none;    
+        padding-inline: 5.6rem;
+        
     }
 
-    nav#navigation div.menu ul.menu-options li a {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    body header .menu ul.menu-options li a {
+        color: #e6e6e6;
+        text-decoration: none;
+        font-size: 2.4rem;
+        margin-inline: 3.2rem;
     }
 
-    div.menu ul.menu-options{
-        display: block;
-        flex-direction: row;
-        gap: 2rem;
-        font-weight: 700;
-        font-size: 1.8rem;
-        line-height: 2.4rem;
+    body header .menu ul.menu-options li a:hover {
+        transform: scale(1.05);
+        font-weight: 900;
     }
-
-    div.menu ul.menu-options li a {
-        margin-inline: 6.4rem;
-        display: block;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 4rem;
-    }
-
+    
     body main section.home div.content div.slider-container {
         margin-top: 18rem;
-
     }
 
     body main section#contact div.content ul {
