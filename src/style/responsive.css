@@ -7,7 +7,6 @@
     body main section#service {
         width: 100%;
         height: 100vh;
-        border: 0.5rem solid #161616;
         padding-bottom: 125rem;
     }
 
@@ -108,7 +107,7 @@
         max-height: 30rem;
         flex-grow: 1;
     }
-
+    
 }
 
 @media (min-width: 1440px) {
