@@ -1,0 +1,118 @@
+@media (min-width: 375px) { 
+
+    body main section#about {
+        padding-inline: 0.8rem;
+    }
+
+    body main section#service {
+        width: 100%;
+        height: 100vh;
+        padding-bottom: 125rem;
+    }
+
+}
+
+@media (min-width: 481px) {
+
+    body main section.home div.content div.slider-container {
+        margin-top: 14.4rem;
+
+    }
+    
+    body main section#service div.content div.container-card {
+        margin-inline: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    body main section#service div.content div.container-card span.card {
+        max-width: 35rem;
+        max-height: 35rem;
+    }
+
+
+}
+
+@media (min-width: 769px) { 
+    
+    nav#navigation * {
+        visibility: initial;
+        display: initial;
+        opacity: initial;
+        flex-direction: initial;
+        position: initial;
+        font-size: initial;
+        font-weight: initial;
+        transform: initial;
+    }
+    
+    body header button#btn-burguer {
+        display: none;
+    }
+
+    body header nav .menu ul.menu-options {
+        display: none;    
+        padding-inline: 5.6rem;
+        
+    }
+
+    body header .menu ul.menu-options li a {
+        color: #e6e6e6;
+        text-decoration: none;
+        font-size: 2.4rem;
+        margin-inline: 3.2rem;
+    }
+
+    body header .menu ul.menu-options li a:hover {
+        transform: scale(1.05);
+        font-weight: 900;
+    }
+    
+    body main section.home div.content div.slider-container {
+        margin-top: 18rem;
+    }
+
+    body main section#contact div.content ul {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+    }
+
+}
+
+@media (min-width: 1024px) { 
+
+    body main section.home div.content div.slider-container {
+        margin-top: 20rem;
+
+    }
+
+    body main section#service {
+        padding-bottom: initial;
+    }
+
+    body main section#service div.content div.container-card {
+        margin-inline: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    body main section#service div.content div.container-card span.card {
+        max-width: 30rem;
+        max-height: 30rem;
+        flex-grow: 1;
+    }
+    
+}
+
+@media (min-width: 1440px) {
+    body main section.home div.content div.slider-container {
+        margin-top: 32rem;
+
+    }
+}

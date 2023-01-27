@@ -7,10 +7,10 @@
     <meta name="description" content="FS Polimento empresa de serviço de restauração, polimento e impermeabilização de pedras">
     <meta name="keyworks" content="FS Polimento, restauração, polimento, impermeabilização, pedras">
     <meta name="author" content="Danillo Xavier da Silva Oliveira">
-    <link rel="stylesheet" href="./src/assets/style/main.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="shortcut icon" href="./src/assets/images/favicon-fspolimento.png" type="image/png">
-    <title>FS Polimento - Home</title>
+    <link rel="shortcut icon" href="../assets/images/favicon-fspolimento.png" type="image/png">
+    <title>FS Polimento - Serviços</title>
 </head>
 
 <body>
@@ -18,19 +18,19 @@
         <nav id="navigation">   
             <span class="logo">
                 <a href="#">
-                    <img src="./src/assets/images/logo-fspolimento.jpg" alt="">
+                    <img src="../assets/images/logo-fspolimento.jpg" alt="">
                 </a>
             </span>
         
             <div class="menu" id="menu">
                 <ul class="menu-options">
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="../../index.html">Home</a></li>
 
-                    <li><a href="./src/public/about.html">Sobre</a></li>
+                    <li><a href="./about.html">Sobre</a></li>
 
-                    <li><a href="./src/public/services.html">Serviços</a></li>
+                    <li><a href="./services.html">Serviços</a></li>
 
-                    <li><a href="./src/public/contact.html">Contato</a></li>
+                    <li><a href="./contact.html">Contato</a></li>
                 </ul>
             </div>
 
@@ -45,23 +45,89 @@
         </nav>
 
     </header>
-    
+
     <main>
-        <section class="home">
+        <section id="service">
             <span>
-                <h2>Bem vindo a FS Polimento</h2>
-                <h1>FS Polimento empresa de serviço de restauração, polimento e impermeabilização de pedras</h1>
+                <h3>Serviços</h3>
             </span>
 
             <div class="content">
-                <p>Raspagem, Polimento e Impermeabilizacao de Mármores e Granitos</p>
+                <div class="container-card">
+                    <span class="card">
+                        <h3>Restauração</h3>
 
-                <div class="slider-container">
-                    <img src="./src/assets/images/slideshow_1.png" alt="Imagem 1">
-                    <img src="./src/assets/images/slideshow_2.png" alt="Imagem 2">
-                    <img src="./src/assets/images/slideshow_3.png" alt="Imagem 3">
+                        <p>
+                            O processo inicia-se com toda a proteção do ambiente a ser trabalhado, como portas, paredes e moveis fixos, utilizamos lona plástica com fita crepe. Em seguida removemos todos os rejuntes velhos, quando necessário aplicamos um rejunte especial.
+                        </p>
+
+                        <p>
+                            O processo de raspagem é realizado para nivelar e eliminar os riscos das pedras, na sequência lixamos com a finalidade de fechar os poros e preparar a pedra para o polimento.
+                        </p>
+
+                    </span>
+
+                    <span class="card">
+                        <h3>Polimento</h3>
+
+                        <p> 
+                            Após o processo de raspagem prosseguimos com polimento natural com um produto composto de oxido de alumínio e uma mistura de duas resinas naturais, com potássio extra esse produto é formulado e balanceado especificamente para devolver o brilho natural.
+                        </p>
+
+                        <p> 
+                            Todos esses processos são feitos com água, que vamos retirando com um aspirador de alta pressão próprio para esse procedimento.
+                        </p>
+                    </span>
+
+                    <span class="card">
+                        <h3>Impermeabilização</h3>
+
+                        <p>
+                            Em mármores, granitos e outras pedras naturais utilizamos um hidro óleo repelente, que não altera as características das pedras.
+                        </p>
+
+                        <p> 
+                            O impermeabilizante é aplicado com um rolo de espuma de 03 a 04 demãos, dependendo da porosidade da pedra, ele infiltra nos poros das pedras e tem como finalidade proteger contra os ataques da infiltração e umidade contra água, óleos etc, gerando maior durabilidade.
+                        </p>
+                    </span>
                 </div>
 
+                <button id="btn-open-modal">Saiba Mais</button>
+    
+                <div id="fade" class="hide"></div>
+
+                <div id="modal" class="hide" open="abriu">
+                    <div class="modal-header">
+                        <h3>Resultados dos nossos serviços</h3>
+                        <button id="btn-close-modal">
+                            <img src="../assets/images/btn-close-modal.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        
+                        <img src="../assets/images/modal-img_1.jpg" alt="">
+                        
+                        <img src="../assets/images/modal-img_2.jpg" alt="">
+                        
+                        <img src="../assets/images/modal-img_3.jpg" alt="">
+                        
+                        <img src="../assets/images/modal-img_4.jpg" alt="">
+                            
+                        <img src="../assets/images/modal-img_5.jpg" alt="">
+
+                        <img src="../assets/images/modal-img_6.jpg" alt="">
+
+                        <img src="../assets/images/modal-img_7.jpg" alt="">
+                        
+                        <img src="../assets/images/modal-img_8.jpg" alt="">
+
+                        <img src="../assets/images/modal-img_9.jpg" alt="">
+
+                        <img src="../assets/images/modal-img_10.jpg" alt="">
+                    </div>
+                </div>
+            
             </div>
 
             <a href="https://wa.me/5511947535202" target="_blank" class="btn-floating">
@@ -71,11 +137,10 @@
             </a>
 
         </section>
-        
     </main>
 
     <footer>
-        
+            
         </span>
             <p>Siga-nos em nossas redes sociais</p>
         <span>
@@ -103,10 +168,10 @@
         <p>
             &copy; Copyright <span class="year"></span> - FS Polimento - Todos os direitos reservados.
         </p>
-        
+    
     </footer>
 
-    <script src="./src/main.js"></script>
-    <script src="./src/slider.js"></script>
+    <script src="../main.js"></script>
+    <script src="../modal.js"></script>
 </body>
 </html>
