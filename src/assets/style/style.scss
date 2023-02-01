@@ -73,6 +73,10 @@ body {
             transition: 200ms ease-in-out;
         }
         
+        button#btn-burguer:hover {
+            cursor: pointer;
+        }
+
         nav .menu ul.menu-options {
             display: block;
             position: absolute;
@@ -116,8 +120,8 @@ body {
         section.home {
             width: 100%;
             height: 100vh;
-            padding-top: 3rem;
-            
+            margin-bottom: 20rem;
+            padding-top: calc($height-header - 6.4rem);
         }
 
         section.home span {
@@ -161,8 +165,8 @@ body {
             margin-inline: auto;
             width: 100%;
             height: 100vh;
-            padding-top: $height-header;
-            padding-inline: auto;
+            padding-top: calc($height-header - 6.4rem);
+            padding-inline: 0.8rem;
         }
 
         section#about span{
@@ -185,7 +189,8 @@ body {
         section#service {
             width: 100%;
             height: 100vh;
-            padding-top: $height-header;
+            margin-bottom: 20rem;
+            padding-top: calc($height-header - 6.4rem);
             padding-bottom: 140rem;
         }  
     
@@ -196,7 +201,8 @@ body {
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-size: 1.8rem;            
+            font-size: 1.8rem;     
+            gap: 1.6rem;       
         }
 
         section#service div.content {
@@ -237,7 +243,7 @@ body {
         }
 
         section#service div.content button#btn-open-modal {
-            width: 15rem;
+            width: 20rem;
             height: 5rem;
             margin-block: 4rem;
             margin-inline: auto;    
@@ -259,7 +265,7 @@ body {
         section#contact {
             width: 100%;
             height: 100vh;
-            padding-top: $height-header;
+            padding-top: calc($height-header - 6.4rem);
             padding-inline: 0.8rem;
             text-align: center;
         }
@@ -289,6 +295,10 @@ body {
             text-align: justify;
             gap: 1rem;
             color: $paragraph-color;
+
+        }
+        section#contact div.content ul li path {
+            stroke: $primary-color;
         }
     
         section#contact div.content ul li a {
@@ -299,18 +309,14 @@ body {
             color: $paragraph-color;
         }
     
-        section#contact div.content ul li path {
-            stroke: $primary-color;
-        }
-
     }
 
     footer {
+        padding-block: 6rem;
         padding-inline: 0.8rem;
         text-align: center;
         background-color: $primary-color;
         color: #e6e6e6;
-        padding-block: 6rem;
 
         ul.social-links {
             display: flex;
@@ -414,10 +420,26 @@ body {
         background: none;
         border: none;
     }
+
+    #btn-close-modal:hover {
+        cursor: pointer;
+    }
     
     .modal-body img {
         width: 40rem;
         max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .modal-body video {
+        width: 40rem;
+        max-width: 90%;
+        height: 40rem;
+        max-height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
